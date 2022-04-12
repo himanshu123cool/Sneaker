@@ -22,10 +22,6 @@
     --para-color: #808080;
 }
 
-body{
-    max-width: 1440px;
-}
-
 html{
     font-size: 62.5%;
 }
@@ -593,11 +589,11 @@ a{
     }
 
     .left-header{
-        gap: 1.5rem;
+        gap: 2.5rem;
     }
 
     .right-header{
-        gap: 1.5rem;
+        gap: 2.5rem;
     }
 
     #aavtar{
@@ -746,11 +742,11 @@ a{
     }
 
     .left-header{
-        gap: 1.5rem;
+        gap:2.5rem;
     }
 
     .right-header{
-        gap: 1.5rem;
+        gap: 2.5rem;
     }
 
     #aavtar{
