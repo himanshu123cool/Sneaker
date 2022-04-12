@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers</title>
+    <link rel="shortcut icon" href="./ecommerce-product-page-main/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- font-awesome-cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+    <!-- header******************************
+    ******************************section -->
+    <header id="header">
+        <div class="left-header">
+            <div class="three-line">
+                <img src="./ecommerce-product-page-main/images/icon-menu.svg" alt="" id="open">
+            </div>
+            <div id="logo">
+                <img src="./ecommerce-product-page-main/images/logo.svg" alt="">
+            </div>
+            <nav id="navbar">
+                <ul class="nav-lists">
+                    <li><a href="#" class="nav-link collection-link"> Collections</a> </li>
+                    <li><a href="#" class="nav-link men-link">Men</a> </li>
+                    <li><a href="#" class="nav-link women-link">Women</a> </li>
+                    <li><a href="#" class="nav-link about-link">About</a> </li>
+                    <li><a href="#" class="nav-link contact-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <img src="./ecommerce-product-page-main/images/icon-close.svg" alt="" id="close">
+                <ul class="hamburger-nav-lists">
+                    <li><a href="#" class="hamburger-nav-link collection-link"> Collections</a> </li>
+                    <li><a href="#" class="hamburger-nav-link men-link">Men</a> </li>
+                    <li><a href="#" class="hamburger-nav-link women-link">Women</a> </li>
+                    <li><a href="#" class="hamburger-nav-link about-link">About</a> </li>
+                    <li><a href="#" class="hamburger-nav-link contact-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-header">
+            <img src="./ecommerce-product-page-main/images/icon-cart.svg" alt="cart" id="cart">
+            <span class="notification">1</span>
+            <img src="IMG_20211202_124303_285.jpg" alt="aavtar-img" id="aavtar">
+        </div>
+        <div class="cart-section">
+            <div class="cart-heading">
+                <h2>Cart</h2>
+            </div>
+            <div class="cart-content">
+                <h2 class="empty-heading">Your cart is empty.</h2>
+                <div class="cart-items">
+                   <div class="cart-section-img">
+                       <img src="./ecommerce-product-page-main/images/image-product-1-thumbnail.jpg" alt="">
+                   </div>
+                   <div class="cart-section-heading">
+                       <h2>Fall Limited Edition Sneaker</h2>
+                       <br>
+                       <p>$125.00 x <span class="quantity"></span>= $<span class="amount"></span>.00</p>
+                   </div>
+                   <div class="cart-section-delete-icon">
+                       <img src="./ecommerce-product-page-main/images/icon-delete.svg" alt="">
+                   </div>
+                   <button class="cart-section-checkout-btn add-to-cart-btn-2">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- hero******************************
+    ******************************section -->
+
+    <main>
+        <section id="hero-container" class="container">
+            <div class="hero-left-container">
+                <div class="main-hero-img-container">
+                    <img src="./ecommerce-product-page-main/images/image-product-1.jpg" alt="hero-img"
+                        id="hero-main-img">
+                </div>
+                <div class="hero-thumbnails-img-container">
+                    <div class="hero-thumbnail-img-box">
+                        <img src="./ecommerce-product-page-main/images/image-product-1-thumbnail.jpg"
+                            alt="thumbnails-img-1" class="hero-thumbnails-img">
+                    </div>
+                    <div class="hero-thumbnail-img-box">
+                        <img src="./ecommerce-product-page-main/images/image-product-2-thumbnail.jpg"
+                            alt="thumbnails-img-2" class="hero-thumbnails-img">
+                    </div>
+                    <div class="hero-thumbnail-img-box">
+                        <img src="./ecommerce-product-page-main/images/image-product-3-thumbnail.jpg"
+                            alt="thumbnails-img-3" class="hero-thumbnails-img">
+                    </div>
+                    <div class="hero-thumbnail-img-box">
+                        <img src="./ecommerce-product-page-main/images/image-product-4-thumbnail.jpg"
+                            alt="thumbnails-img-4" class="hero-thumbnails-img">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right-container">
+                <h2 class="hero-right-first-heading">SNEAKER COMPANY</h2>
+                <h1 class="hero-right-second-heading">Fall Limited Edition Sneaker</h1>
+                <p class="hero-right-para">These low-profile sneakers are your perfect casual wear companion. Featuring
+                    a durable rubber outer sole, they’ll withstand everything the weather can offer</p>
+                <h2 class="hero-right-rate">$125.00</h2>
+                <h3 class="hero-right-discount">50%</h3>
+                <h2 class="hero-right-main-rate"><del>$250.00</del></h2>
+                <div class="cart-box">
+                    <div class="msg">
+                        <p>Insert a quantity would you like to purchase</p>
+                    </div>
+                    <div class="cart-count">
+                        <button class="cart-minus-btn">
+                            <div class="alert-msg">
+                                <p>Do not remove anymore</p>
+                            </div>
+                            <img src="./ecommerce-product-page-main/images/icon-minus.svg" alt="cart-minus">
+                        </button>
+                        <div class="cart-quantity">
+                            <h2 id="cart-value"></h2>
+                        </div>
+                        <button class="cart-plus-btn">
+                            <img src="./ecommerce-product-page-main/images/icon-plus.svg" alt="cart-plus">
+                        </button>
+                    </div>
+                    <div class="add-to-cart-btn">
+                        <h2><i class="fa-solid fa-cart-plus cart-img"></i>&nbsp; Add to cart</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
