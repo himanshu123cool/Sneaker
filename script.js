@@ -94,23 +94,16 @@ $(document).ready(function(){
 
 
 // image-script 
-$(document).ready(function(e){
-    $('.hero-thumbnail-img-box').eq(0).click(function(){
-        $('.main-hero-img-container').html( '<img src="./ecommerce-product-page-main/images/image-product-1.jpg" alt="hero-img" id="hero-main-img">')
+
+$(document).ready(function(){
+    $('.hero-thumbnails-img').click(function(){
+        $('#hero-main-img').attr('src' , this.src)
     })
-    $('.hero-thumbnail-img-box').eq(1).click(function(){
-        $('.main-hero-img-container').html( '<img src="./ecommerce-product-page-main/images/image-product-2.jpg" alt="hero-img" id="hero-main-img">')
+    $('.overlay-hero-thumbnails-img').click(function(){
+        $('.overlay-hero-main-img').attr('src' , this.src)
     })
-    $('.hero-thumbnail-img-box').eq(2).click(function(){
-        $('.main-hero-img-container').html( '<img src="./ecommerce-product-page-main/images/image-product-3.jpg" alt="hero-img" id="hero-main-img">')
-    })
-    $('.hero-thumbnail-img-box').eq(3).click(function(){
-        $('.main-hero-img-container').html( '<img src="./ecommerce-product-page-main/images/image-product-4.jpg" alt="hero-img" id="hero-main-img">')
-    })
+
 })
-
-
-
 
 
 
@@ -123,4 +116,92 @@ $(document).ready(function(){
     $('#close').click(function(){
         $('.hamburger').hide('slow')
     })
+})
+
+
+
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        $('.cart-section').hide()
+    })
+})
+
+
+
+
+
+// overlay-script 
+$(document).ready(function(){
+    $('.overlay').hide()
+    $('#hero-main-img').click(function(){
+        $('.overlay').show()
+    })
+
+    $('#overlay-close').click(function(){
+        $('.overlay').hide()
+    })
+})
+
+
+
+
+
+// slider
+$(document).ready(function(){
+    var currentSlide = 1;
+    var position = 0;
+    var slideCount = $('.overlay-main-hero-img-container').children().length;
+
+    // right-indicator 
+    $('.right-indicator').click(function(){
+        if(currentSlide<slideCount){
+            position = position -425
+            $('.overlay-hero-main-img').css({'transform' : 'translate(' + position +'px)','transition': '1s'})
+            currentSlide++
+            console.log(currentSlide)
+        }
+    })  
+
+//  left-indicator
+$('.left-indicator').click(function(){
+    if(currentSlide>1){
+        position = position + 425
+        $('.overlay-hero-main-img').css({'transform' : 'translate(' + position +'px)','transition': '1s'})
+        currentSlide--
+    }else{
+        currentSlide =1
+    }
+})
+})
+
+
+
+// slider 1025px 
+
+$(document).ready(function(){
+    var currentSlide = 1;
+    var position = 0;
+    var slideCount = $('.banner-main-hero-img-container').children().length;
+
+    // right-indicator 
+    $('.hero-right-indicator').click(function(){
+        if(currentSlide<slideCount){
+            position = position -100
+            $('.banner-hero-main-img').css({'transform' : 'translate(' + position +'%)','transition': '1s'})
+            currentSlide++
+            console.log(currentSlide)
+        }
+    })  
+
+//  left-indicator
+$('.hero-left-indicator').click(function(){
+    if(currentSlide>1){
+        position = position + 100
+        $('.banner-hero-main-img').css({'transform' : 'translate(' + position +'%)','transition': '1s'})
+        currentSlide--
+    }else{
+        currentSlide =1
+    }
+})
 })
