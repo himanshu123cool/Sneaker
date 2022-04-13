@@ -445,6 +445,14 @@ a{
     z-index: 999999;
 }
 
+.hero-left-indicator{
+    display: none;
+}
+
+.hero-right-indicator{
+    display: none;
+}
+
 .indicator-box{
     position: relative;
 }
@@ -509,16 +517,19 @@ a{
     #hero-container{
         display: grid;
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 6rem;
         overflow: hidden;
     }
 
     .main-hero-img-container{
         position: relative;
+        max-height: 50vh;
+        width: 100%;
     }
 
     .banner-main-hero-img-container{
         width: 400%;
+        height: 100%;
         display: flex;
         position: relative;
     }
@@ -528,13 +539,12 @@ a{
     }
 
     .banner-hero-main-img{
-        height: 35vh;
         width: 100%;
+        height: 100%;
     }
 
     .hero-thumbnails-img-container{
        justify-content: center; 
-       gap: 3rem;
        display: none;
     }
 
@@ -584,8 +594,7 @@ a{
         justify-content: center;   
         cursor: pointer;
         z-index: 99999;
-    }
-    
+    } 
 }
 
 
@@ -605,13 +614,17 @@ a{
     #hero-container{
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
+    }
+
+    .main-hero-img-container{
+        max-height: 40vh;
+        height: 100%;
     }
 
     .banner-main-hero-img-container{
         display: flex;
         position: relative;
-        width: 400%;
+        height: 100%;
     }
 
     #hero-main-img{
@@ -619,10 +632,9 @@ a{
     }
 
     .banner-hero-main-img{
-        max-height: 35vh;
         width: 100%;
+        height: 100%;
     }
-
 
     .hero-thumbnails-img-container{
        justify-content: center; 
@@ -644,7 +656,7 @@ a{
     }
 
     .three-line{
-            display: block; 
+        display: block; 
     }
 
     .hamburger{
@@ -677,7 +689,7 @@ a{
     .hero-left-indicator{
         position: absolute;
         left: 0;
-        top: 20%;
+        top: 22%;
         height: 50px;
         width: 50px;
         background-color: var(--white-color);
@@ -692,7 +704,7 @@ a{
     .hero-right-indicator{
         position: absolute;
         right: 0;
-        top: 20%;
+        top: 22%;
         height: 50px;
         width: 50px;
         background-color: var(--white-color);
@@ -716,23 +728,27 @@ a{
 
     .container{
         padding: 2rem 0;
-        overflow: hidden;
+        overflow: hidden; 
     }
 
     #hero-container{
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 5rem;
+    }
+
+    .main-hero-img-container{
+        max-height: 50vh;
     }
 
     .banner-main-hero-img-container{
         display: flex;
         position: relative;
-        width: 400%;
+        height: 100%;
     }
 
     .banner-hero-main-img{
-        max-height: 80vh;
+        height: 100%;
         width: 100%;
     }
 
@@ -830,6 +846,11 @@ a{
 /* phone  */
 @media (min-width :320px) and (max-width:480px){
 
+     .container{
+        padding: 2rem 0;
+        overflow: hidden; 
+    }
+
     #header{
         margin: 0 1rem;
     }
@@ -843,40 +864,46 @@ a{
     }
 
     .right-header{
-        gap: 3rem;
+        gap: 1rem;
     }
 
     #aavtar{
         width:30px;
         height: 30px;
-    }
-
-    .container{
-        padding: 1rem;
+        margin-left: 2rem;
     }
 
     #hero-container{
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
-    .hero-left-container{
-        gap: 1rem;
+    .main-hero-img-container{
+        max-height: 40vh;
+    }
+
+    .banner-main-hero-img-container{
+        display: flex;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    .banner-hero-main-img{
+        height: 100%;
+        width: 100%;
     }
 
     #hero-main-img{
-        border-radius: 0;
-        width: 100%;
-        max-height: 50vh;
-        object-fit: cover;
+       display: none;
     }
 
     .hero-thumbnails-img-container{
-       justify-content: center; 
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 1rem;
+       display: none;
+    }
+
+    .hero-right-container{
+        padding: 1rem 0;
     }
 
     .hero-right-second-heading{
@@ -975,6 +1002,38 @@ a{
     .cart-section{
         left: 0;
         width: 95vw;
+    } 
+
+    .overlay{
+        display: none!important;
+    }
+
+    .hero-left-indicator{
+        position: absolute;
+        left: 0;
+        top: 15%;
+        height: 35px;
+        width: 35px;
+        background-color: var(--white-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .hero-right-indicator{
+        position: absolute;
+        right: 0;
+        top: 15%;
+        height: 35px;
+        width: 35px;
+        background-color: var(--white-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+        cursor: pointer;
     }
 
 }
@@ -983,53 +1042,64 @@ a{
 /* mini-phone */
 @media (min-width :0px) and (max-width:319px){
 
+    .container{
+        padding: 2rem 0;
+        overflow: hidden; 
+    }
+
     #header{
         margin: 0 1rem;
     }
-
+    
     #logo>img{
         width: 100px;
     }
 
     .left-header{
-        gap:3rem;
+        gap:1.5rem;
     }
 
     .right-header{
-        gap: 3rem;
+        gap: 1.5rem;
     }
 
     #aavtar{
         width:30px;
         height: 30px;
-    }
-
-    .container{
-        padding: 1rem;
+        margin-left: 1rem;
     }
 
     #hero-container{
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
-    .hero-left-container{
-        gap: 1rem;
+    .main-hero-img-container{
+        max-height: 40vh;
+    }
+
+    .banner-main-hero-img-container{
+        display: flex;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    .banner-hero-main-img{
+        height: 100%;
+        width: 100%;
     }
 
     #hero-main-img{
-        border-radius: 0;
-        width: 100%;
-        max-height: 50vh;
-        object-fit: cover;
+       display: none;
+    }
+
+    #hero-main-img{
+       display: none;
     }
 
     .hero-thumbnails-img-container{
-       justify-content: center; 
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 1rem;
+       display: none;
     }
 
     .hero-right-second-heading{
@@ -1128,6 +1198,38 @@ a{
     .cart-section{
         left: 0;
         width: 95vw;
+    }
+
+    .overlay{
+        display: none!important;
+    }
+
+    .hero-left-indicator{
+        position: absolute;
+        left: 0;
+        top: 10%;
+        height: 35px;
+        width: 35px;
+        background-color: var(--white-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .hero-right-indicator{
+        position: absolute;
+        right: 0;
+        top: 10%;
+        height: 35px;
+        width: 35px;
+        background-color: var(--white-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+        cursor: pointer;
     }
 }
 
